@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زامات قوة الإطفاء العام العام في يناير</title>
+  <link rel="apple-touch-icon" sizes="120x120" href="KFF_logo.png">
+    <style>
+      body {
+          background-color: #1a1a2e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          color: #fff;
+          min-height: 100vh;  
+          width: 100%;  
+      }
+
+        .loader-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+      .container {
+          background-color: #16213e;
+          padding: 30px;
+          border-radius: 10px;
+          max-width: 100%;
+          overflow-x: auto;
+          text-align: center; 
+      }
+
+      h2 {
+          margin-bottom: 20px;
+          text-align: center; 
+      }
+
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          direction: rtl; /* إضافة اتجاه الكتابة من اليمين إلى اليسار */
+      }
+
+      th, td {
+          padding: 8px; 
+          font-size: 12px;
+          text-align: center;
+      }
+      th {
+          background-color: #009688;
+          color: #fff;
+      }
+
+      td.A {
+          background-color: #008000; /* أخضر */
+      }
+
+      td.B {
+          background-color: #ff0000; /* أحمر */
+      }
+
+      td.C {
+          background-color: #0000ff; /* أزرق */
+      }
+
+    </style>
+</head>
+<body>
+    <div class="loader-container" id="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="container">
+        <h1>زامات قوة الإطفاء العام في شهر يناير</h1>
+      <h2><img src="KFF_logo.png" alt="KFF_logo.png"></h2>
+      
+        <label for="month">اختر الشهر:</label>
+        <select id="month" onchange="changeMonth(this.value)">
+          <option value="1">يناير</option>
+          <option value="2">فبراير</option>
+          <option value="3">مارس</option>
+          <option value="4">إبريل</option>
+          <option value="5">مايو</option>
+          <option value="6">يونيو</option>
+          <option value="7">يوليو</option>
+          <option value="8">أغسطس</option>
+          <option value="9">سبتمبر</option>
+          <option value="10">أكتوبر</option>
+          <option value="11">نوفمبر</option>
+          <option value="12">ديسمبر</option>
+      </select>
+        <table>
+            <tr>
+                <th>الأحد</th>
+                <th>الاثنين</th>
+                <th>الثلاثاء</th>
+                <th>الأربعاء</th>
+                <th>الخميس</th>
+                <th>الجمعة</th>
+                <th>السبت</th>
+            </tr>
+            <tr>
+                <td class="C">-</td>
+                <td class="A">1 ج</td>
+                <td class="B">2 ا</td>
+                <td class="C">3 ب</td>
+                <td class="A">4 ج</td>
+                <td class="B">5 ا</td>
+                <td class="C">6 ب</td>
+            </tr>
+          <tr>
+              <td class="A">7 ج</td>
+              <td class="B">8 ا</td>
+              <td class="C">9 ب</td>
+              <td class="A">10 ج</td>
+              <td class="B">11 ا</td>
+              <td class="C">12 ب</td>
+              <td class="A">13 ج</td>
+          </tr>
+
+          <tr>
+              <td class="B">14 ا</td>
+              <td class="C">15 ب</td>
+              <td class="A">16 ج</td>
+              <td class="B">17 ا</td>
+              <td class="C">18 ب</td>
+              <td class="A">19 ج</td>
+              <td class="B">20 ا</td>
+          </tr>
+          <tr>
+             <td class="C">21 ب</td>
+              <td class="A">22 ج</td>
+              <td class="B">23 ا</td>
+              <td class="C">24 ب</td>
+              <td class="A">25 ج</td>
+              <td class="B">26 ا</td>
+              <td class="C">27 ب</td>
+          </tr>
+          <tr>
+            <td class="A">28 ج</td>
+              <td class="B">29 ا</td>
+              <td class="C">30 ب</td>
+              <td class="A">31 ج</td>
+              <td class="B">-</td>
+              <td class="C">-</td>
+              <td class="A">-</td>
+          </tr>
+
+        </table>
+      <button onclick="goToIndexPage()" class="professional-button">العودة إلى الصفحة الرئيسية</button>
+    </div>
+  <script>
+      function goToIndexPage() {
+          var pageURL = "index.html";
+
+          document.getElementById("loader-container").style.display = "flex";
+
+          setTimeout(function () {
+              window.location.href = pageURL;
+          }, 1000);
+      }
+  </script>
+
+  <style>
+      /* أسلوب تصميم الزر الاحترافي */
+      .professional-button {
+          background-color: #273967;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 5px;
+      }
+  </style>
+
+  <script>
+      function changeMonth(selectedMonth) {
+          var pageURL = selectedMonth + ".html";
+
+          document.getElementById("loader-container").style.display = "flex";
+
+          setTimeout(function() {
+              window.location.href = pageURL;
+          }, 1000); 
+      }
+  </script>
+</body>
+</html>
